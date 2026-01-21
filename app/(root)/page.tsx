@@ -1,9 +1,10 @@
 import TradingViewWidget from "@/components/TradingViewWidget";
 import {
+  HEATMAP_WIDGET_CONFIG,
   MARKET_DATA_WIDGET_CONFIG,
   MARKET_OVERVIEW_WIDGET_CONFIG,
   TOP_STORIES_WIDGET_CONFIG,
-} from "@/lib/contants";
+} from "@/lib/constants";
 
 const Home = () => {
   const scriptUrl =
@@ -22,11 +23,11 @@ const Home = () => {
             height={600}
           />
         </div>
-        <div className="md-col-span xl:col-span-2">
+        <div className="md:col-span-1 xl:col-span-2">
           <TradingViewWidget
             title="Stock Heatmap"
             scriptUrl={`${scriptUrl}stock-heatmap.js`}
-            config={MARKET_OVERVIEW_WIDGET_CONFIG}
+            config={HEATMAP_WIDGET_CONFIG}
             className="custom-chart"
             height={600}
           />
